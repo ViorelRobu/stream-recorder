@@ -4,15 +4,16 @@ Small project to connect to online audio stream and save it
 - can email the recording as attachment
 
 ## MUST HAVE
-// TODO: Add UI for the user to add streams which will haved to be recorded
-// TODO: Create a database to store the streams that need to be recorded
-// TODO: add cron job to query the database for streams that need to be recorded every minute
-// TODO: send email to user with the recording attached
-// TODO: add a way to delete recordings
-// TODO: add a way to delete streams from the database
-// TODO: add a way to edit streams in the database
-// TODO: update the readme file with the deployment instructions
-// TODO: add audio player to stream the recordings
+- Add UI for the user to add streams which will haved to be recorded
+- Create a database to store the streams that need to be recorded
+- add cron job to query the database for streams that need to be recorded every minute
+- send email to user with the recording attached
+- add a way to delete recordings
+- add a way to delete streams from the database
+- add a way to edit streams in the database
+- update the readme file with the deployment instructions
+- add audio player to stream the recordings
 
 ## GOOD TO HAVE
-// TODO: add posibility to save recording to external drives (S3, Google Drive, etc)
+- add posibility to save recording to external drives (S3, Google Drive, etc)
+- test if a stream can be recorded by connecting to it and playing into the speakers/headphones
