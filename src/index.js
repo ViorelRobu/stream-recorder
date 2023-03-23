@@ -1,15 +1,12 @@
-const { httpsWorker, httpWorker } = require('./workers/workers.js');
-const Worker = require('./workers/Worker.js');
+const express = require('express');
+const app = express();
+const port = 3000;
 
-const settings = {
-    url: 'https://s9.yesstreaming.net:7014/stream',
-    recordingLength: 6000,
-    recordingName: 'rvesv'
-}
+const homeController = require('./controllers/HomeController');
 
-const worker = new Worker(httpsWorker, settings);
+app.set('view engine', 'pug');
+app.use(express.static('../public'));
 
-(async function (){
-  await worker.work();
-})();
+app.get('/', homeController.index);
 
+app.listen(port, () => console.log(`Example app listening on port ${port}!`));

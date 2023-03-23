@@ -4,7 +4,6 @@ Small project to connect to online audio stream and save it
 - can email the recording as attachment
 
 ## MUST HAVE
-// TODO: Add a worker to handle the http protocol
 // TODO: Add UI for the user to add streams which will haved to be recorded
 // TODO: Create a database to store the streams that need to be recorded
 // TODO: add cron job to query the database for streams that need to be recorded every minute

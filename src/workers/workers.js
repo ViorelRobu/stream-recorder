@@ -18,7 +18,7 @@ const httpsWorker = (url, recordingLength, recordingName) => {
     res.on('end', () => {
       // process the buffer and write the audio file
       const audio = Buffer.concat(audioBuffer);
-      fs.WriteStream(`${__dirname}/../../audio/${recordingName}.mp3`).write(audio);
+      fs.WriteStream(`${__dirname}/../../public/audio/${recordingName}.mp3`).write(audio);
     });
   });
 };
@@ -39,7 +39,7 @@ const httpWorker = (url, recordingLength, recordingName) => {
     res.on('end', () => {
       // process the buffer and write the audio file
       const audio = Buffer.concat(audioBuffer);
-      fs.WriteStream(`${__dirname}/../../audio/${recordingName}.mp3`).write(
+      fs.WriteStream(`${__dirname}/../../public/audio/${recordingName}.mp3`).write(
         audio,
       );
     });
