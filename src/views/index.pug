@@ -4,5 +4,28 @@ html
     include partials/navbar.pug
     div.container
       h1= title
-      h2 Schedule stream recordings so that you won't miss your favorite shows
+      p Schedule audio stream recordings so that you won't miss your favorite shows
+      hr
+      h3 What you've already recorded
+      if (streams.length > 0)
+        table.table.table-striped
+          thead
+            tr
+              th Name
+              th Date
+              th Description
+              th Recording
+              th
+          tbody
+            each stream in streams
+              tr
+                td= stream.name
+                td= stream.date
+                td= stream.description
+                td
+                  audio(src="/audio/rvesv.mp3" controls) 
+                td
+                  a.btn.btn-primary(href="/streams/" + stream.id) View
+      else
+        p No streams found
   include partials/footer.pug
