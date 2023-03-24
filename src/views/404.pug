@@ -1,0 +1,13 @@
+html
+  include ./partials/head.pug
+  body
+    include ./partials/navbar.pug
+    div.container
+      .row.d-flex.align-items-center.justify-content-center
+        .col-6
+          img#notfound(src="/images/404.jpg" alt="404")
+          p.text-center
+            a.credits(href="http://www.freepik.com/" target="_blank") Designed by Alekksall / Freepik
+        .col-6
+          h1.error-title 404
+          h2.error-message Page not found
